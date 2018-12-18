@@ -1,0 +1,21 @@
+{
+  "name": "inet-refresh",
+  "version": "0.1.0",
+  "description": "send refresh ping for windows internet option",
+  "main": "inet-refresh.js",
+  "scripts": {
+    "start": "node inet-refresh.js "
+  },
+  "repository": "https://github.com/sople1/node-inet-refresh",
+  "dependencies": {
+    "ffi": "^2.3.0"
+  },
+  "keywords": [
+    "proxy",
+    "inet",
+    "config",
+    "windows"
+  ],
+  "author": "SnooeyNET <sople1@snooey.net>",
+  "license": "CC0"
+}
