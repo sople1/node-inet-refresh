@@ -3,8 +3,12 @@
   "version": "0.1.0",
   "description": "send refresh ping for windows internet option",
   "main": "inet-refresh.js",
+  "bin": {
+    "app": "inet-refresh.js"
+  },
   "scripts": {
-    "start": "node inet-refresh.js "
+    "start": "node inet-refresh.js ",
+    "build": "pkg . --out-path build --targets latest-win-x64,latest-win-x86 --options expose-gc"
   },
   "repository": "https://github.com/sople1/node-inet-refresh",
   "keywords": [
