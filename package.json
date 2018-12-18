@@ -7,9 +7,6 @@
     "start": "node inet-refresh.js "
   },
   "repository": "https://github.com/sople1/node-inet-refresh",
-  "dependencies": {
-    "ffi": "^2.3.0"
-  },
   "keywords": [
     "proxy",
     "inet",
@@ -17,5 +14,11 @@
     "windows"
   ],
   "author": "SnooeyNET <sople1@snooey.net>",
-  "license": "CC0"
+  "license": "CC0",
+  "dependencies": {
+    "ffi": "^2.3.0"
+  },
+  "devDependencies": {
+    "pkg": "^4.3.5"
+  }
 }

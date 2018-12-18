@@ -7,14 +7,28 @@
  *
  * @author SnooeyNET <sople1@snooey.net>
  */
-
-const INTERNET_OPTION_REFRESH = 37
-const INTERNET_OPTION_SETTINGS_CHANGED = 39
-
 const ffi = require('ffi');
+
+const opt = {
+    INTERNET_OPTION_REFRESH: 37,
+    INTERNET_OPTION_SETTINGS_CHANGED: 39
+};
 
 let inet = ffi.Library('wininet', {
     'InternetSetOptionW': ["bool", ['int', 'int', 'int', 'int']]
 });
-inet.InternetSetOptionW(0, INTERNET_OPTION_REFRESH, 0, 0);            // InternetSetOption(0, INTERNET_OPTION_REFRESH, IntPtr.Zero, 0);
-inet.InternetSetOptionW(0, INTERNET_OPTION_SETTINGS_CHANGED, 0, 0);   // InternetSetOption(0, INTERNET_OPTION_SETTINGS_CHANGED, IntPtr.Zero, 0);
+
+function main() {
+    inet.InternetSetOptionW(0, opt.INTERNET_OPTION_REFRESH, 0, 0);            // InternetSetOption(0, INTERNET_OPTION_REFRESH, IntPtr.Zero, 0);
+    inet.InternetSetOptionW(0, opt.INTERNET_OPTION_SETTINGS_CHANGED, 0, 0);   // InternetSetOption(0, INTERNET_OPTION_SETTINGS_CHANGED, IntPtr.Zero, 0);
+    console.log("InternetSetOption refresh launched.");
+}
+
+if (typeof require != 'undefined' && require.main === module) {
+    main();
+}
+
+
+module.exports = {
+    run: () => main()
+};
