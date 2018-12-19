@@ -3,7 +3,7 @@
  * node wininet.dll refresh Internet Setting for proxy
  * using ffi, wininet.dll
  *
- * you may can use InternetSetOptionA rather then InternetSetOptionW
+ * you may can use InternetSetOptionA instead of InternetSetOptionW
  *
  * @author SnooeyNET <sople1@snooey.net>
  */
