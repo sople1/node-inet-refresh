@@ -20,7 +20,7 @@
   "author": "SnooeyNET <sople1@snooey.net>",
   "license": "CC0",
   "dependencies": {
-    "ffi": "^2.3.0"
+    "ffi-napi": "^3.0.1"
   },
   "devDependencies": {
     "pkg": "^4.3.5"

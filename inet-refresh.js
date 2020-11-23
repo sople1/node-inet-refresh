@@ -7,7 +7,7 @@
  *
  * @author SnooeyNET <sople1@snooey.net>
  */
-const ffi = require('ffi');
+const ffi = require('ffi-napi');
 
 const opt = {
     INTERNET_OPTION_REFRESH: 37,
